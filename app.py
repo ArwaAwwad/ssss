@@ -1,6 +1,8 @@
 import streamlit as st
 import pickle
 import numpy as np
+import os
+
 
 # تحديد مسار الملف الحالي
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
