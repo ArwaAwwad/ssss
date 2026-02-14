@@ -2,8 +2,12 @@ import streamlit as st
 import pickle
 import numpy as np
 
-# تحميل النموذج
-model = pickle.load(open("main/diabetes_model.pkl", "rb"))
+# تحديد مسار الملف الحالي
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# تحميل النموذج من نفس مجلد app.py
+model_path = os.path.join(BASE_DIR, "diabetes_model.pkl")
+model = pickle.load(open(model_path, "rb"))
 
 st.title("Diabetes Prediction App")
 
